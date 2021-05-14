@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap');
+
+
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --main-red: #A30000;
+    --main-black: #0E0E0E;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+    background-color: var(--main-black);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+#navbar h2 {
+    margin-left: 2.8rem;
+    font-size: 2.8rem;
+}
+
+#navbar ul {
+    display: flex;
+    margin-right: 2.8rem;
+    list-style: none;
+    font-size: 1.5rem;
+    
+
+}
+
+#navbar ul li {
+    margin-right: 2.5rem;
+    transition: 250ms linear;
+    transition-property: transform;
+}
+
+#navbar li:hover {
+    color: var(--main-red);
+    transform: translateY(-15px);
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-weight: 100;
+}
+
+
+#welcome-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(233, 233, 233);
+    font-size: 3rem;
+}
+
+.intro {
+    position: relative;
+}
+
+.intro::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -2em;
+    height: 90%;
+    width: 4px;
+    background-color: var(--main-blue);
+
+}
+
+.name {
+    margin-left: 10px;
+}
+
+#welcome-section p {
+    text-align: center;
+}
+
+.projects-flex {
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+    width: 85%;
+    margin: 3rem auto;
+}
+
+#projects h1 {
+    width: 80%;
+    text-align: center;
+    margin: 4rem auto 2.5rem auto;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--main-red);
+    position: relative;
+    
+}
+
+
+
+.project-tile {
+    width: 350px;
+    height: 450px;
+    background-color: var(--main-black);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    
+    
+}
+
+.project-tile p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.project-tile a {
+    position: absolute;
+    bottom: 10px;
+
+    
+}
+
+.project-img {
+    height: 120px;
+    width: 120px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 2rem;
+    
+
+}
+
+.codepen {
+    transform: scale(1.2);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    transition: transform 300ms ;
+    
+}
+
+.codepen:hover {
+    background-color: var(--main-red);
+    transform: translateY(-15px);
+}
+
+.html {
+    color: #E44D26;
+}
+
+.css {
+    color: #056DB5;
+}
+
+.js {
+    color: #EFD81D;
+}
+
+
+#contact {
+    
+    height: 300px;
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    background-color: var(--main-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    color: white;
+
+}
+
+#contact h2 {
+    margin-top: 3rem;
+}
+
+#contact p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.contact-imgs {
+    margin-top: 5rem;
+}
+
+#contact img {
+    height: 50px;
+    width: 50px;
+    margin-left: 2rem;
+}
+
+#contact img:hover {
+    filter: invert(70%);
+}
+
+
+@media (max-width: 1100px) {
+    .project-tile {
+        width: 240px;
+    }
+}
+
+@media (max-width: 860px) {
+    .projects-flex {
+        display: inline-block;
+        width:  100vw;
+        margin: auto;
+
+    }
+
+    .project-tile {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #contact {
+        width: 80%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #navbar h2 {
+        margin: 0;
+    }
+
+    #navbar ul {
+        margin: 0;
+    }
+}
